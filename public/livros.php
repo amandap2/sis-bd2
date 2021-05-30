@@ -29,7 +29,7 @@
 
         $sql =
             'SELECT ' . $nome .
-            
+            '     , ' . $autor .
             '     , ' . $categoria .
             /*TODO-2: Adicione cada variavel a consulta abaixo */
             '  FROM livros';
@@ -46,6 +46,7 @@
             '<table>' .
             '    <tr>' .
             '        <th>' . $nome . '</th>' .
+            '        <th>' . $autor . '</th>' .
             /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
             '        <th>' . $categoria . '</th>' .
             '    </tr>';
@@ -58,6 +59,7 @@
                 echo '<tr>';
 
                 echo '<td>' . $registro[$nome] . '</td>' .
+                    '<td>' . $registro[$autor] . '</td>' .
                     /* TODO-4: Adicione a tabela os novos registros. */
                     '<td>' . $registro[$categoria] . '</td>';
                 echo '</tr>';
